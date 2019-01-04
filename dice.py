@@ -111,7 +111,7 @@ def best_defense_three_vs_two(attack_dice):
   print("defend {} with {:.2f}".format(colors[best_dice], best_ratio))
   return best_ratio
 
-def all(single_defender):
+def print_all(single_defender):
   if single_defender:
     defense_fn = best_defense_three_vs_one
   else:
@@ -137,6 +137,10 @@ def all(single_defender):
     print("  {}".format(colors[list(dice)]))
   return best_ratio
 
-all(False)
+print("3 vs 1:")
+print_all(single_defender=True)
+
+print("\n3 vs 2:")
+print_all(single_defender=False)
 
 
